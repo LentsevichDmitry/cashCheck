@@ -51,11 +51,11 @@
             echo "<td><form action='quantityUpdate.php' method='post'>
                         <input type='hidden' name='id' value='". $row['id'] . "'/>
                         <input class='btn btn-danger' name='minus' type='submit' value='-'> " .
-                        $quantity = (float)$row["quantity"] .
+                        $quantity = (integer)$row["quantity"] .
                       " <input class='btn btn-success' name='plus' type='submit' value='+'></form>";
 
-            echo "<td>". $lowPrice = $row["low_price"]. "</td>";
-            echo "<td>". $highPrice = $row["high_price"]. "</td>";
+            echo "<td>". $lowPrice = (float)$row["low_price"]. "</td>";
+            echo "<td>". $highPrice = (float)$row["high_price"]. "</td>";
             echo "<td><form action='updateForm.php' method='post'>
                         <input type='hidden' name='id' value='". $row['id'] . "'/>
                         <input class='btn btn-success' name='update' type='submit' value='Update'>
