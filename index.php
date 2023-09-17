@@ -51,7 +51,7 @@
             echo "<td><form action='quantityUpdate.php' method='post'>
                         <input type='hidden' name='id' value='". $row['id'] . "'/>
                         <input class='btn btn-danger' name='minus' type='submit' value='-'> " .
-                        $quantity = /*(integer)*/$row["quantity"] .
+                        $quantity = (float)$row["quantity"] .
                       " <input class='btn btn-success' name='plus' type='submit' value='+'></form>";
 
             echo "<td>". $lowPrice = $row["low_price"]. "</td>";
